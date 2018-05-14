@@ -6,12 +6,12 @@
 #{form @authenticate()}
     #{if flash.error}
         <p class="error">
-            &{flash.error}
+            ${messages.get(flash.error)}
         </p>
     #{/if}
     #{if flash.success}
         <div class="text-success">
-            <label class="control-label">&{flash.success}</label>
+            <label class="control-label">${messages.get(flash.success)}</label>
         </div>
     #{/if}
     <div class="row">
